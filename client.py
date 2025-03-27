@@ -65,7 +65,7 @@ class MCPClient:
     def __init__(self):
         """初始化 MCP 客户端"""
         self.model = "qwen/qwq-32b"
-        self.openai_api_key = "sk_jMJIJ0i3AmCgnfAQneHIpzwMdixK750PEJy4ZouU5gY"
+        self.openai_api_key = ""
         self.base_url = "https://api.ppinfra.com/v3/openai"
         self.session: Optional[ClientSession] = None
         self.exit_stack = AsyncExitStack()
