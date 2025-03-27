@@ -15,7 +15,7 @@ from starlette.routing import Route, Mount
 mcp = FastMCP("WeatherServer", host="0.0.0.0", port=7777)
 # mcp_server = Server("WeatherServer")
 OPENWEATHER_API_BASE = "https://api.openweathermap.org/data/2.5/weather"
-API_KEY = "7e955cf031d36edc963601190d9368d8"
+API_KEY = ""
 USER_AGENT = "weather-app/1.0"
 
 
