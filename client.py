@@ -16,6 +16,7 @@ from mcp.client.sse import sse_client
 from openai import OpenAI
 
 # 这里不用非要使用我这种实现方式，只要是符合OpenAI格式的LLM API都可以噢
+# todo 不支持function calling的模型如何调用工具，prompts+parser
 def get_ChatOpenAI(
         model_name: str = "glm4-chat",
         temperature: float = 0.7,
