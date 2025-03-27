@@ -15,7 +15,7 @@ from mcp.client.sse import sse_client
 
 from openai import OpenAI
 
-
+# 这里不用非要使用我这种实现方式，只要是符合OpenAI格式的LLM API都可以噢
 def get_ChatOpenAI(
         model_name: str = "glm4-chat",
         temperature: float = 0.7,
@@ -51,7 +51,7 @@ def get_ChatOpenAI(
                 # model_name="qwen/qwen-2.5-72b-instruct",
                 model_name="qwen/qwq-32b",
                 base_url="https://api.ppinfra.com/v3/openai",
-                api_key="sk_jMJIJ0i3AmCgnfAQneHIpzwMdixK750PEJy4ZouU5gY",
+                api_key="",
             )
         model = ChatOpenAI(**params)
     except Exception as e:
@@ -152,9 +152,6 @@ class MCPClient:
 
 
 async def main():
-    # if len(sys.argv) < 2:
-    #     print("Usage: uv run client.py <URL of SSE MCP server (i.e. http://localhost:8080/sse)>")
-    #     sys.exit(1)
     client = MCPClient()
     try:
         await client.connect_to_sse_server(server_url="http://192.168.102.7:7777/sse")
