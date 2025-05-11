@@ -1,0 +1,1 @@
+手写MCPServer，MCPClient，使用httpx+sse实现。即：可以在一台机器上启动server后是其他所有的Client都可以链接使用MCP服务
